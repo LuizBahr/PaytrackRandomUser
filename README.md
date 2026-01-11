@@ -43,7 +43,7 @@ npm install
 
 ## 3. Inicie o servidor
 `
-npm start
+node .\api.js
 `
 
 O servidor será iniciado em: http://localhost:3000
