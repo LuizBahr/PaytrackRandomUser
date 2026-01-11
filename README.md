@@ -58,6 +58,23 @@ SQLite é usado apenas como banco local; pode ser substituído por outro banco S
 
 Relatórios de inserção e atualização são exibidos no console para monitoramento do processamento.
 
+Exemplo de resposta:
+```json
+{
+  "status": "OK",
+  "operacao": "UPSERT por email",
+  "chaveUnica": "email",
+  "relatorio": "./reports/relatorio-2026-01-11T17-01-37.json",
+  "resumo": {
+    "totalRecebido": 150,
+    "persistencia": {
+      "inseridos": 150,
+      "atualizados": 0
+    }
+  }
+}
+```
+
 O projeto foi desenvolvido considerando escalabilidade e facilidade de adaptação para outros endpoints ou bancos de dados.
 
 ## Autor
