@@ -29,11 +29,13 @@ app.get('/', async (req, res) => {
         });
 
         users = Array.from(new Map(users.map(u => [u.email, u])).values());
+
         const mergedSchema = mergeFlattenedSchemas(users);
         await createTableFromObject("usuarios", mergedSchema);
 
+        const processedEmails = new Set();
+
         for (const user of users) {
-            
             report.registrarRecebido();
 
             try {
@@ -48,6 +50,9 @@ app.get('/', async (req, res) => {
                     report.ignoradoMenorDeIdade();
                     continue;
                 }
+
+                if (processedEmails.has(userFlatten.email)) continue;
+                processedEmails.add(userFlatten.email);
                 
                 const exists = await existsByEmail("usuarios", userFlatten.email);
                 await upsertFromObject("usuarios", userFlatten);
