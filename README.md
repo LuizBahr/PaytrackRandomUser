@@ -8,7 +8,7 @@ Este projeto é uma aplicação Node.js que simula a sincronização de dados de
 - SQLite (para armazenamento local)
 - Express (para criar o servidor e endpoints)
 - Axios (para requisições HTTP)
-- JavaScript moderno (ES Modules)
+- JavaScript (ES Modules)
 
 ## Funcionalidades
 
