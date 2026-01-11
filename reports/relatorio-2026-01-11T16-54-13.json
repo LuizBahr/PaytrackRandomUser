@@ -1,0 +1,17 @@
+{
+  "inicio": "2026-01-11T16:54:12.542Z",
+  "resumo": {
+    "totalRecebido": 150,
+    "persistencia": {
+      "inseridos": 150,
+      "atualizados": 0
+    },
+    "ignorados": {
+      "menorDeIdade": 0,
+      "semEmail": 0,
+      "erroTecnico": 0
+    }
+  },
+  "erros": [],
+  "fim": "2026-01-11T16:54:13.533Z"
+}
